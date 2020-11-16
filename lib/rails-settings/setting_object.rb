@@ -2,7 +2,7 @@ module RailsSettings
   class SettingObject < ActiveRecord::Base
     self.table_name = 'settings'
 
-    belongs_to :target, :polymorphic => true, touch: true
+    belongs_to :target, :polymorphic => true, :touch => true
 
     validates_presence_of :var, :target_type
     validate do
